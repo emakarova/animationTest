@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+#cloud img {
+  width: 250px;
+}
+
+.photo1 img {
+  width: 50px;
+}
+
+@keyframes flowDown {
+  0% {transform: rotate(0deg);}
+  20% {transform: rotate(25deg), translateY(10px), translateX(3px);}
+  40% {transform: rotate(-25deg), translateY(20px);}
+  100% {transform: rotate(360deg), translateY(25px), translateX(5px);}
+}
+
+#cloud {
+  animation: flowDown 2s 0s 1;
+}

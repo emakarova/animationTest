@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="316px" height="250px" viewBox="0 0 316 250" enable-background="new 0 0 316 250" xml:space="preserve">
+<g>
+	<g opacity="0.8">
+		<defs>
+			<polygon id="SVGID_1_" opacity="0.8" points="284.1,19.8 19.61,211.29 161.59,202.4 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<defs>
+				
+					<rect id="SVGID_3_" x="-624.54" y="-554.98" transform="matrix(-0.9113 0.4117 -0.4117 -0.9113 261.0128 1098.8281)" width="1273.43" height="2265"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			
+				<rect x="-14.7" y="63.52" transform="matrix(-0.9113 0.4117 -0.4117 -0.9113 367.0669 197.9145)" opacity="0.7" clip-path="url(#SVGID_4_)" fill="#FFC715" width="353.84" height="149.94"/>
+		</g>
+	</g>
+	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="60.54,127.41 30.03,169.2 295.72,15.35 	"/>
+	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="292.57,19.6 28.07,211.1 170.06,202.21 	"/>
+	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="29.88,171.24 84.36,169.93 295.72,15.35 	"/>
+	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="62.25,208.96 106.4,233.23 121.41,205.26 	"/>
+	<polygon opacity="0.5" fill="#FFC715" points="56.41,213.73 100.56,238 115.58,210.03 	"/>
+	<polygon opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC715" points="31.82,175.77 73.19,169.88 239.64,49.82 	
+		"/>
+	<polygon opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFC715" points="48.16,128.72 17.65,170.52 283.34,16.66 	
+		"/>
+</g>
+</svg>
