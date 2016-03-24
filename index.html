@@ -1,102 +1,131 @@
 <!DOCTYPE html>
 <head>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
     }
 
-    "I am just making some changes here to test something"
+    body {
+      width: 100vw;
+      height: 100vw;
+      overflow: hidden;
+    }
 
     #cloud {
-      width: 300px;
-      height: 500px;
-    }
-    #cloud img {
-      width: 250px;
+      width: 50vw;
+      height: auto;
+      position: relative;
+      z-index: 2;
       margin-top: 200px;
-      margin-left: 30px;
+      margin-left: 100px;
     }
 
+    #ppRight{
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      width: 14vw;
+      animation: planeRight 5s ease-in-out infinite;
+    }
 
-    #photo2 {
-      animation: flowDown 2s 0.7s ease-in-out;
+    #ppLeft {
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      width: 14vw;
+      animation: planeLeft 5s ease-in-out infinite;
+    }
+
+    #ppUp {
+      opacity: 0;
+      position: absolute;
+      z-index: 1;
+      width: 14vw;
+      animation: planeUp 5s ease-in-out infinite;
+    }
+
+    #ppFront {
+      opacity: 0;
+      animation: planeFront 5s ease-in-out infinite;
+      position: absolute;
+      width: 14vw;
+      z-index: 3;
+    }
+
+    #photoFront {
+      animation: fallFront3 5s ease-in-out infinite;
       position: absolute;
       opacity: 0;
+      width: 10vw;
+      z-index: 3;
     }
 
-    #photo2 img {
-      width: 50px;
-    }
-
-    #music2 {
+    #musicFront {
       position: absolute;
-      animation: flowDown2 2s 0.7s ease-in-out;
+      animation: fallFront 5s infinite;
       opacity: 0;
+      width: 10vw;
+      z-index: 3;
     }
 
-    #music2 img {
-      width: 50px;
-    }
-
-    #movie2 {
+    #movieFront {
       position: absolute;
-      animation: flowDown3 2s 0.7s ease-in-out;
+      animation: fallFront2 5s ease-in-out infinite;
       opacity: 0;
-
+      width: 10vw;
+      z-index: 3;
     }
 
-    #movie2 img {
-      width: 50px;
+    @-webkit-keyframes fallFront {
+      0% {-webkit-transform: translate(14vw, -2vw) rotate(-20deg) scale(0.8); opacity: 0; -webkit-animation-timing-function: ease-in-out;}
+      50% {-webkit-transform: translate(36vw, 52vw) rotate(330deg) scale(1.5); opacity: 1; -webkit-animation-timing-function: ease-out;}
+      60% {-webkit-transform: translate(36vw, 52vw) rotate(330deg) scale(1.5); opacity: 0;}
+      100% {-webkit-transform: translate(36vw, 52vw) rotate(330deg) scale(1.5); opacity: 0;}
     }
 
-
-    #photo1 {
-      animation: flowDown 2s ease-in-out;
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
+    @-webkit-keyframes fallFront2 {
+      0% {-webkit-transform: translate(38vh, -9vw) rotate(0deg) scale(0.8); opacity: 0; -webkit-animation-timing-function: ease-in-out;}
+      50% {-webkit-transform: translate(20vh, 56vw) rotate(350deg) scale(1.5); opacity: 1; -webkit-animation-timing-function: ease-out;}
+      60% {-webkit-transform: translate(20vh, 56vw) rotate(350deg) scale(1.5); opacity: 0;}
+      100% {-webkit-transform: translate(40vh, 56vw) rotate(350deg) scale(1.5); opacity: 0;}
     }
 
-    #photo1 img {
-      width: 50px;
+    @-webkit-keyframes fallFront3 {
+      0% {-webkit-transform: translate(58vw,-9vw) rotate(30deg) scale(0.8); opacity: 0; -webkit-animation-timing-function: ease-in-out;}
+      50% {-webkit-transform: translate(44vw,52vw) rotate(400deg)scale(1.5); opacity: 1; -webkit-animation-timing-function: ease-out;}
+      60% {-webkit-transform: translate(44vw,52vw) rotate(400deg)scale(1.5); opacity: 0;}
+      100% {-webkit-transform: translate(44vw,52vw) rotate(400deg)scale(1.5); opacity: 0;}
     }
 
-    #music1 {
-      position: absolute;
-      animation: flowDown2 2s ease-in-out;
-      z-index: -1;
-      opacity: 0;
+    @-webkit-keyframes planeRight {
+      0% {-webkit-transform: translate(36vw, 60vw) scale(0.8); opacity: 0;}
+      56% {-webkit-transform: translate(36vw, 60vw) scale(0.8); opacity: 0;}
+      60% {-webkit-transform: translate(36vw, 60vw) scale(0.8); opacity: 1;}
+      100% {-webkit-transform: translate(84vw, 16vw) scale(2); opacity: 0;}
     }
 
-    #music1 img {
-      width: 50px;
+    @-webkit-keyframes planeLeft {
+      0% {-webkit-transform: translate(44vw, 60vw) scale(0.2); opacity: 0;}
+      56% {-webkit-transform: translate(44vw, 60vw) scale(0.2); opacity: 0;}
+      60% {-webkit-transform: translate(44vw, 60vw) scale(0.2); opacity: 1;}
+      100% {-webkit-transform: translate(-20vw, 16vw) scale(2); opacity: 0;}
     }
 
-    #movie1 {
-      position: absolute;
-      z-index: -1;
-      animation: flowDown3 2s ease-in-out;
-      opacity: 0;
+    @-webkit-keyframes planeUp {
+      0% {-webkit-transform: translate(40vw, 42vw) scale(2.8); opacity: 0;}
+      56% {-webkit-transform: translate(40vw, 42vw) scale(2.8); opacity: 0;}
+      60% {-webkit-transform: translate(40vw, 42vw) scale(2.8); opacity: 1;}
+      100% {-webkit-transform: translate(40vw, 2vw) scale(0.5); opacity: 0;}
     }
 
-    #movie1 img {
-      width: 50px;
+    @-webkit-keyframes planeFront {
+      0% {-webkit-transform: translate(40vw, 54vw) scale(0.2); opacity: 0;}
+      56% {-webkit-transform: translate(40vw, 54vw) scale(0.2); opacity: 0;}
+      60% {-webkit-transform: translate(40vw, 54vw) scale(0.2); opacity: 1;}
+      100% {-webkit-transform: translate(19vw, 48vw) scale(10); opacity: 0;}
     }
 
-    @keyframes flowDown {
-      0% {transform: translate(0px, 3px) rotate(-20deg); opacity: 1;}
-      100% {transform: translate(110px, 260px) rotate(380deg); opacity: 1;}
-    }
-
-    @keyframes flowDown2 {
-      0% {transform: translate(120px, 5px) rotate(0deg); opacity: 1;}
-      100% {transform: translate(130px, 280px) rotate(360deg); opacity: 1;}
-    }
-
-    @keyframes flowDown3 {
-      0% {transform: translate(220px,3px) rotate(30deg); opacity: 1;}
-      100% {transform: translate(150px,260px) rotate(390deg); opacity: 1;}
-    }
 
   </style>
 
@@ -105,32 +134,19 @@
 
 <body>
 
-  <div id="photo2">
-    <img src="assets/photo.svg" />
-  </div>
+  <img id="ppFront" src="assets/pp_front.svg" />
 
-  <div id="music2">
-    <img src="assets/music.svg" />
-  </div>
+  <img id="ppUp" src="assets/pp_up.svg" />
 
-  <div id="movie2">
-    <img src="assets/movie.svg" />
-  </div>
+  <img id="ppRight" src="assets/pp_right.svg" />
 
+  <img id="ppLeft" src="assets/pp_left.svg" />
 
-  <div id="photo1">
-    <img src="assets/photo.svg" />
-  </div>
+  <img id="photoFront" src="assets/photo.svg" />
 
-  <div id="music1">
-    <img src="assets/music.svg" />
-  </div>
+  <img id="musicFront" src="assets/music.svg" />
 
-  <div id="movie1">
-    <img src="assets/movie.svg" />
-  </div>
+  <img id="movieFront" src="assets/movie.svg" />
 
-  <div id="cloud">
-    <img src="assets/cloud.svg" />
-  </div>
+  <img id="cloud" src="assets/cloud.svg" />
 </body>
